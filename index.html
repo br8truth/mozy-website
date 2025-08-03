@@ -54,73 +54,88 @@
 
         /* Hero Header Section */
         .hero-header {
-            background: var(--primary-gradient);
+            position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            position: relative;
+            justify-content: center;
             overflow: hidden;
-            padding: 4rem 0;
+            background: var(--gray-50);
         }
 
-        .hero-header::before {
-            content: '';
+        .hero-mockup-container {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='7' cy='7' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .app-mockup {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(102, 126, 234, 0.15) 0%,
+                rgba(118, 75, 162, 0.15) 100%
+            );
+            z-index: 2;
         }
 
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             color: white;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius-large);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .hero-text {
-            text-align: left;
-        }
-
-        .hero-visual {
+        .hero-badges-overlay {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
             display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-        }
-
-        .app-mockup {
-            max-width: 100%;
-            height: auto;
-            max-height: 600px;
-            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
-            transition: transform 0.3s ease;
-        }
-
-        .app-mockup:hover {
-            transform: scale(1.02);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .logo-icon {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
             transition: transform 0.3s ease;
         }
 
@@ -129,36 +144,33 @@
         }
 
         .logo-text {
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 900;
             letter-spacing: -0.03em;
-            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(45deg, #ffffff, #f0f8ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .tagline {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
             letter-spacing: 0.02em;
         }
 
         .hero-subtitle {
-            font-size: 1.75rem;
-            font-weight: 500;
+            font-size: 1.8rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .hero-description {
             font-size: 1.1rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin: 0 auto 3rem;
+            opacity: 0.85;
+            margin: 0 auto 0;
             line-height: 1.7;
         }
 
@@ -516,32 +528,36 @@
 
             .hero-header {
                 min-height: 100vh;
-                padding: 2rem 0;
             }
 
             .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .hero-text {
-                text-align: center;
-                order: 2;
-            }
-
-            .hero-visual {
-                order: 1;
+                max-width: 90%;
+                padding: 1.5rem;
             }
 
             .logo {
-                justify-content: center;
                 flex-direction: column;
                 gap: 1rem;
             }
 
-            .app-mockup {
-                max-height: 400px;
+            .logo-text {
+                font-size: 2.5rem;
+            }
+
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .hero-badges-overlay {
+                bottom: 1rem;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
             }
 
             .logo-text {
@@ -605,32 +621,36 @@
 <body>
     <!-- Hero Header -->
     <section class="hero-header">
+        <!-- Full-screen App Mockup Background -->
+        <div class="hero-mockup-container">
+            <img src="app-mockup-image.png" alt="Mozy App Interface" class="app-mockup">
+        </div>
+        
+        <!-- Subtle Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Centered Content Overlay -->
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="logo">
-                        <img src="mozy-icon.png" alt="Mozy App Icon" class="logo-icon">
-                        <div class="logo-text">Mozy</div>
-                    </div>
-                    <div class="tagline">Cozy Classical Music for Kids</div>
-                    
-                    <h1 class="hero-subtitle">Give Your Child the Gift of Beautiful Classical Music</h1>
-                    <p class="hero-description">Transform your daily routines with classical music that actually works for children. Whether it's settling down for bedtime, creating a peaceful study environment, or simply enjoying quiet family time together, Mozy provides the perfect soundtrack for your child's day.</p>
-                    
-                    <div class="app-badges">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                            alt="Download on the App Store" class="app-badge">
-                        <div style="position: relative;">
-                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                                alt="Get it on Google Play" class="coming-soon-badge">
-                            <div class="coming-soon-overlay">Coming Soon</div>
-                        </div>
-                    </div>
+                <div class="logo">
+                    <img src="mozy-icon.png" alt="Mozy App Icon" class="logo-icon">
+                    <div class="logo-text">Mozy</div>
                 </div>
+                <div class="tagline">Cozy Classical Music for Kids</div>
                 
-                <div class="hero-visual">
-                    <img src="app-mockup-image.png" alt="Mozy App Screenshots" class="app-mockup">
-                </div>
+                <h1 class="hero-subtitle">Give Your Child the Gift of Beautiful Classical Music</h1>
+                <p class="hero-description">Transform your daily routines with classical music that actually works for children. Whether it's settling down for bedtime, creating a peaceful study environment, or simply enjoying quiet family time together, Mozy provides the perfect soundtrack for your child's day.</p>
+            </div>
+        </div>
+        
+        <!-- App Store Badges at Bottom -->
+        <div class="hero-badges-overlay">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store" class="app-badge">
+            <div style="position: relative;">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                    alt="Get it on Google Play" class="coming-soon-badge">
+                <div class="coming-soon-overlay">Coming Soon</div>
             </div>
         </div>
         
