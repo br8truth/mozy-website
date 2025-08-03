@@ -102,12 +102,14 @@
         .hero-content-bottom {
             position: absolute;
             bottom: 0;
-            right: 0;
-            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 800px;
             z-index: 3;
             padding: 2rem;
             color: white;
-            text-align: right;
+            text-align: center;
         }
 
         .hero-content-glass {
@@ -129,7 +131,7 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            justify-content: flex-end;
+            justify-content: center;
             margin-top: 2rem;
         }
 
@@ -674,8 +676,9 @@
             }
 
             .hero-content-bottom {
-                width: 100%;
-                right: 0;
+                width: 95%;
+                left: 50%;
+                transform: translateX(-50%);
                 text-align: center;
                 padding: 1rem;
             }
@@ -800,10 +803,7 @@
         <div class="hero-branding">
             <div class="logo">
                 <img src="mozy-icon.png" alt="Mozy App Icon" class="logo-icon">
-                <div>
-                    <div class="logo-text">Mozy</div>
-                    <div class="tagline">Cozy Classical Music for Kids</div>
-                </div>
+                <div class="logo-text">Mozy</div>
             </div>
         </div>
         
