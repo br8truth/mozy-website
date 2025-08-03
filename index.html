@@ -100,10 +100,10 @@
 
         /* Modern Audio Player */
         .audio-player {
-            position: absolute;
+            position: fixed;
             top: 2rem;
             right: 2rem;
-            z-index: 3;
+            z-index: 1000;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
             backdrop-filter: blur(24px) saturate(180%);
             border-radius: 16px;
@@ -785,10 +785,7 @@
             }
 
             .audio-player {
-                top: 1rem;
-                right: 1rem;
-                min-width: 200px;
-                padding: 0.5rem 0.75rem;
+                display: none;
             }
 
             .play-pause-btn {
