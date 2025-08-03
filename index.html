@@ -91,7 +91,7 @@
         .hero-branding {
             position: absolute;
             top: 2rem;
-            left: 2rem;
+            right: 2rem;
             z-index: 3;
             display: flex;
             align-items: center;
@@ -102,30 +102,35 @@
         .hero-content-bottom {
             position: absolute;
             bottom: 0;
-            left: 0;
             right: 0;
+            width: 50%;
             z-index: 3;
-            background: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.8) 0%,
-                rgba(0, 0, 0, 0.4) 50%,
-                transparent 100%
-            );
-            padding: 3rem 2rem 2rem;
+            padding: 2rem;
             color: white;
-            text-align: center;
+            text-align: right;
+        }
+
+        .hero-content-glass {
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.1) 0%, 
+                    rgba(255, 255, 255, 0.05) 100%
+                );
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: var(--border-radius-large);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2.5rem;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         .hero-badges-overlay {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 3;
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-end;
+            margin-top: 2rem;
         }
 
         .logo {
@@ -642,7 +647,7 @@
 
             .hero-branding {
                 top: 1rem;
-                left: 1rem;
+                right: 1rem;
             }
 
             .logo {
@@ -669,14 +674,18 @@
             }
 
             .hero-content-bottom {
-                padding: 2rem 1rem 1rem;
+                width: 100%;
+                right: 0;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .hero-content-glass {
+                padding: 2rem;
             }
 
             .hero-badges-overlay {
-                position: relative;
-                bottom: auto;
-                left: auto;
-                transform: none;
+                justify-content: center;
                 flex-direction: column;
                 align-items: center;
                 gap: 0.5rem;
@@ -800,17 +809,19 @@
         
         <!-- Bottom Content Area -->
         <div class="hero-content-bottom">
-            <h1 class="hero-subtitle">Give Your Child the Gift of Beautiful Classical Music</h1>
-            <p class="hero-description">Transform your daily routines with classical music that actually works for children. Whether it's settling down for bedtime, creating a peaceful study environment, or simply enjoying quiet family time together, Mozy provides the perfect soundtrack for your child's day.</p>
-            
-            <!-- App Store Badges -->
-            <div class="hero-badges-overlay">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                    alt="Download on the App Store" class="app-badge">
-                <div style="position: relative;">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                        alt="Get it on Google Play" class="coming-soon-badge">
-                    <div class="coming-soon-overlay">Coming Soon</div>
+            <div class="hero-content-glass">
+                <h1 class="hero-subtitle">Give Your Child the Gift of Beautiful Classical Music</h1>
+                <p class="hero-description">Transform your daily routines with classical music that actually works for children. Whether it's settling down for bedtime, creating a peaceful study environment, or simply enjoying quiet family time together, Mozy provides the perfect soundtrack for your child's day.</p>
+                
+                <!-- App Store Badges -->
+                <div class="hero-badges-overlay">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store" class="app-badge">
+                    <div style="position: relative;">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                            alt="Get it on Google Play" class="coming-soon-badge">
+                        <div class="coming-soon-overlay">Coming Soon</div>
+                    </div>
                 </div>
             </div>
         </div>
