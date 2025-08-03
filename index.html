@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mozy - Cozy Classical Music for Kids | Transform Your Child's Day</title>
-    <meta name="description" content="Give your child the gift of beautiful classical music with Mozy. Human-crafted music, calming white noise, and beautiful themes designed for young listeners ages 0-12.">
+    <meta name="description"
+        content="Give your child the gift of beautiful classical music with Mozy. Human-crafted music, calming white noise, and beautiful themes designed for young listeners ages 0-12.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="mozy-icon.svg">
+    <link rel="icon" type="image/png" href="mozy-icon.png">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -18,8 +22,8 @@
             --text-dark: #2c3e50;
             --text-light: #5d6d7e;
             --white: #ffffff;
-            --shadow-light: 0 10px 30px rgba(0,0,0,0.1);
-            --shadow-medium: 0 20px 40px rgba(0,0,0,0.15);
+            --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 20px 40px rgba(0, 0, 0, 0.15);
             --border-radius: 20px;
         }
 
@@ -28,7 +32,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
@@ -36,7 +40,7 @@
             background: var(--primary-gradient);
             overflow-x: hidden;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -49,18 +53,34 @@
             text-align: center;
             color: var(--white);
         }
-        
+
         .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            padding: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .logo-text {
             font-size: 4rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #fff, #f0f8ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .tagline {
             font-size: 1.5rem;
             font-weight: 300;
@@ -88,7 +108,7 @@
             height: 4px;
             background: linear-gradient(90deg, var(--forest-green), var(--sky-blue), var(--rose-pink), var(--sunshine-orange));
         }
-        
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
@@ -109,7 +129,7 @@
             margin-bottom: 2rem;
             font-weight: 400;
         }
-        
+
         .hero-description {
             font-size: 1.1rem;
             color: var(--text-light);
@@ -135,6 +155,26 @@
             transform: scale(1.05);
         }
 
+        .coming-soon-badge {
+            height: 60px;
+            position: relative;
+            filter: grayscale(100%) opacity(0.6);
+        }
+
+        .coming-soon-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
         /* Why Parents Love Section */
         .why-parents-love {
             background: var(--white);
@@ -158,7 +198,7 @@
             gap: 2.5rem;
             margin-bottom: 3rem;
         }
-        
+
         .feature {
             text-align: left;
             padding: 0;
@@ -206,10 +246,21 @@
             border: 3px solid transparent;
         }
 
-        .mode-card:nth-child(1) { border-color: var(--forest-green); }
-        .mode-card:nth-child(2) { border-color: var(--sky-blue); }
-        .mode-card:nth-child(3) { border-color: var(--rose-pink); }
-        .mode-card:nth-child(4) { border-color: var(--sunshine-orange); }
+        .mode-card:nth-child(1) {
+            border-color: var(--forest-green);
+        }
+
+        .mode-card:nth-child(2) {
+            border-color: var(--sky-blue);
+        }
+
+        .mode-card:nth-child(3) {
+            border-color: var(--rose-pink);
+        }
+
+        .mode-card:nth-child(4) {
+            border-color: var(--sunshine-orange);
+        }
 
         .mode-card:hover {
             transform: translateY(-5px);
@@ -337,8 +388,13 @@
                 padding: 0 1rem;
             }
 
-            .logo {
+            .logo-text {
                 font-size: 3rem;
+            }
+
+            .logo-icon {
+                width: 60px;
+                height: 60px;
             }
 
             .hero {
@@ -382,35 +438,52 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .hero, .why-parents-love, .music-modes, .premium-features, .cta-section {
+        .hero,
+        .why-parents-love,
+        .music-modes,
+        .premium-features,
+        .cta-section {
             animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
-            <div class="logo">🎵 Mozy</div>
+            <div class="logo">
+                <img src="mozy-icon.svg" alt="Mozy App Icon" class="logo-icon">
+                <div class="logo-text">Mozy</div>
+            </div>
             <div class="tagline">Cozy Classical Music for Kids</div>
         </header>
-        
+
         <main>
             <!-- Hero Section -->
             <section class="hero">
                 <div class="hero-content">
                     <h1>Give Your Child the Gift of Beautiful Classical Music</h1>
                     <p class="subtitle">The app designed specifically for young listeners and busy parents</p>
-                    <p class="hero-description">Transform your daily routines with classical music that actually works for children. Whether it's settling down for bedtime, creating a peaceful study environment, or simply enjoying quiet family time together, Mozy provides the perfect soundtrack for your child's day.</p>
-                    
+                    <p class="hero-description">Transform your daily routines with classical music that actually works
+                        for children. Whether it's settling down for bedtime, creating a peaceful study environment, or
+                        simply enjoying quiet family time together, Mozy provides the perfect soundtrack for your
+                        child's day.</p>
+
                     <div class="app-badges">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-badge">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="app-badge">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store" class="app-badge">
+                        <div style="position: relative;">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                                alt="Get it on Google Play" class="coming-soon-badge">
+                            <div class="coming-soon-overlay">Coming Soon</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -422,25 +495,30 @@
                     <div class="feature">
                         <span class="feature-icon">🎼</span>
                         <h3>Human-Crafted Music</h3>
-                        <p>Every piece is performed by real musicians, not AI-generated content. Our carefully curated classical selections are specifically chosen for their soothing, engaging qualities that capture young imaginations without being overwhelming.</p>
+                        <p>Every piece is performed by real musicians, not AI-generated content. Our carefully curated
+                            classical selections are specifically chosen for their soothing, engaging qualities that
+                            capture young imaginations without being overwhelming.</p>
                     </div>
-                    
+
                     <div class="feature">
                         <span class="feature-icon">🌊</span>
                         <h3>Calming White Noise</h3>
-                        <p>Rain, ocean waves, birdsong, and forest sounds for better sleep and focus. Mix ambient sounds with classical music for the ultimate peaceful environment.</p>
+                        <p>Rain, ocean waves, birdsong, and forest sounds for better sleep and focus. Mix ambient sounds
+                            with classical music for the ultimate peaceful environment.</p>
                     </div>
-                    
+
                     <div class="feature">
                         <span class="feature-icon">🎨</span>
                         <h3>Beautiful Themes</h3>
-                        <p>Sky, Forest, Rose, and Sunshine color themes your child will love. Personalize the app experience to match your child's personality and preferences.</p>
+                        <p>Sky, Forest, Rose, and Sunshine color themes your child will love. Personalize the app
+                            experience to match your child's personality and preferences.</p>
                     </div>
-                    
+
                     <div class="feature">
                         <span class="feature-icon">🛡️</span>
                         <h3>Safe and Ad-Free</h3>
-                        <p>No distractions, just pure musical experiences. COPPA compliant with strong privacy protections and no data collection from children without parental consent.</p>
+                        <p>No distractions, just pure musical experiences. COPPA compliant with strong privacy
+                            protections and no data collection from children without parental consent.</p>
                     </div>
                 </div>
             </section>
@@ -453,28 +531,32 @@
                         <div class="mode-icon">😴</div>
                         <h3>Bedtime Mode</h3>
                         <p class="mode-subtitle">For a Beautiful Sleep</p>
-                        <p>Curated peaceful classical music perfect for bedtime routines and helping your child drift off to dreamland.</p>
+                        <p>Curated peaceful classical music perfect for bedtime routines and helping your child drift
+                            off to dreamland.</p>
                     </div>
-                    
+
                     <div class="mode-card">
                         <div class="mode-icon">🌟</div>
                         <h3>Daydream Mode</h3>
                         <p class="mode-subtitle">For Deep Imagination</p>
-                        <p>Classical pieces that inspire creativity and imagination, perfect for quiet play or creative activities.</p>
+                        <p>Classical pieces that inspire creativity and imagination, perfect for quiet play or creative
+                            activities.</p>
                     </div>
-                    
+
                     <div class="mode-card">
                         <div class="mode-icon">🧠</div>
                         <h3>Mozart Mode</h3>
                         <p class="mode-subtitle">For a Healthy Mind</p>
-                        <p>Specifically Mozart compositions leveraging research on Mozart's cognitive benefits for developing minds.</p>
+                        <p>Specifically Mozart compositions leveraging research on Mozart's cognitive benefits for
+                            developing minds.</p>
                     </div>
-                    
+
                     <div class="mode-card">
                         <div class="mode-icon">🔀</div>
                         <h3>Shuffle Mode</h3>
                         <p class="mode-subtitle">Play All Styles</p>
-                        <p>Random selection from all available classical pieces providing variety and musical discovery.</p>
+                        <p>Random selection from all available classical pieces providing variety and musical discovery.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -484,9 +566,12 @@
                 <h2 class="section-title">Premium Features for Growing Families</h2>
                 <ul class="premium-list">
                     <li><strong>Save Favorites:</strong> Your child can heart their favorite pieces for easy access</li>
-                    <li><strong>Complete White Noise Collection:</strong> Full library of ambient sounds for the ultimate sleep environment</li>
-                    <li><strong>Custom App Themes:</strong> Four beautiful themes that reflect your child's personality</li>
-                    <li><strong>Sync Across Devices:</strong> Access favorites and preferences on all family devices</li>
+                    <li><strong>Complete White Noise Collection:</strong> Full library of ambient sounds for the
+                        ultimate sleep environment</li>
+                    <li><strong>Custom App Themes:</strong> Four beautiful themes that reflect your child's personality
+                    </li>
+                    <li><strong>Sync Across Devices:</strong> Access favorites and preferences on all family devices
+                    </li>
                     <li><strong>Enhanced Features:</strong> Priority support and early access to new features</li>
                 </ul>
             </section>
@@ -494,24 +579,29 @@
             <!-- CTA Section -->
             <section class="cta-section">
                 <h2 class="cta-title">From Our Family to Yours</h2>
-                <p class="cta-subtitle">Mozy is lovingly created by a small family business dedicated to bringing the magic of classical music to children everywhere. Your support helps us continue crafting beautiful musical experiences that bring families together.</p>
-                
+                <p class="cta-subtitle">Mozy is lovingly created by a small family business dedicated to bringing the
+                    magic of classical music to children everywhere. Your support helps us continue crafting beautiful
+                    musical experiences that bring families together.</p>
+
                 <div class="age-range">Perfect for ages 0-12 and the parents who love them</div>
-                
-                <p><strong>Download Mozy today and discover how classical music can transform your child's day, one beautiful note at a time.</strong></p>
+
+                <p><strong>Download Mozy today and discover how classical music can transform your child's day, one
+                        beautiful note at a time.</strong></p>
             </section>
         </main>
-        
+
         <footer>
             <div class="footer-content">
                 <div class="footer-links">
                     <a href="https://www.termsfeed.com/live/b5d7afec-8a35-452a-bd51-797ba3d4ab7c">Privacy Policy</a>
                     <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
                 </div>
-                <p>&copy; 2024 Mozy. Creating cozy moments through classical music.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Premium features require subscription. Cancel anytime.</p>
+                <p>&copy; 2025 Mozy. Creating cozy moments through classical music.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Premium features require subscription.
+                    Cancel anytime.</p>
             </div>
         </footer>
     </div>
 </body>
+
 </html>
