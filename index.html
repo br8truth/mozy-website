@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mozy - Cozy Classical Music for Kids | Transform Your Child's Day</title>
     <meta name="description"
-        content="Give your child the gift of beautiful classical music with Mozy. Human-crafted music, calming white noise, and beautiful themes designed for young listeners ages 0-12.">
+        content="Give your child the gift of beautiful Classical music with Mozy. Human-crafted music, calming white noise, and beautiful themes designed for young listeners ages 0-12.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=DynaPuff:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=DynaPuff:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="mozy-icon.png">
     <style>
         :root {
@@ -110,7 +112,7 @@
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 0.75rem 1rem;
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(0, 0, 0, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -121,7 +123,7 @@
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
             border-color: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-            box-shadow: 
+            box-shadow:
                 0 12px 40px rgba(0, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
@@ -216,14 +218,34 @@
             opacity: 0.6;
         }
 
-        .visualizer-bar:nth-child(1) { animation-delay: 0s; }
-        .visualizer-bar:nth-child(2) { animation-delay: 0.1s; }
-        .visualizer-bar:nth-child(3) { animation-delay: 0.2s; }
-        .visualizer-bar:nth-child(4) { animation-delay: 0.3s; }
+        .visualizer-bar:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .visualizer-bar:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .visualizer-bar:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .visualizer-bar:nth-child(4) {
+            animation-delay: 0.3s;
+        }
 
         @keyframes pulse {
-            0%, 100% { height: 12px; opacity: 0.6; }
-            50% { height: 20px; opacity: 1; }
+
+            0%,
+            100% {
+                height: 12px;
+                opacity: 0.6;
+            }
+
+            50% {
+                height: 20px;
+                opacity: 1;
+            }
         }
 
         .visualizer-paused .visualizer-bar {
@@ -247,16 +269,15 @@
         }
 
         .hero-content-glass {
-            background: 
-                linear-gradient(135deg, 
-                    rgba(0, 0, 0, 0.4) 0%, 
-                    rgba(0, 0, 0, 0.3) 100%
-                );
+            background:
+                linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.4) 0%,
+                    rgba(0, 0, 0, 0.3) 100%);
             backdrop-filter: blur(20px) saturate(180%);
             border-radius: var(--border-radius-large);
             border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 3rem 8rem;
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(0, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -273,12 +294,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                rgba(99, 102, 241, 0.2) 0%,
-                rgba(139, 92, 246, 0.15) 20%,
-                rgba(236, 72, 153, 0.1) 40%,
-                rgba(255, 255, 255, 0.05) 60%,
-                transparent 80%);
+            background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(99, 102, 241, 0.2) 0%,
+                    rgba(139, 92, 246, 0.15) 20%,
+                    rgba(236, 72, 153, 0.1) 40%,
+                    rgba(255, 255, 255, 0.05) 60%,
+                    transparent 80%);
             opacity: 1;
             transition: all 0.15s ease-out;
             pointer-events: none;
@@ -292,10 +313,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                rgba(255, 255, 255, 0.2) 0%,
-                rgba(255, 255, 255, 0.05) 40%,
-                transparent 70%);
+            background: radial-gradient(300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0.05) 40%,
+                    transparent 70%);
             opacity: 1;
             transition: all 0.2s ease;
             border-radius: var(--border-radius-large);
@@ -325,7 +346,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
 
@@ -435,31 +456,73 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
         }
 
         @keyframes heroFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-10px) rotate(0.5deg); }
-            66% { transform: translateY(5px) rotate(-0.5deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-10px) rotate(0.5deg);
+            }
+
+            66% {
+                transform: translateY(5px) rotate(-0.5deg);
+            }
         }
 
         @keyframes subtleFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-4px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
         }
 
 
         @keyframes shimmer {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(236, 72, 153, 0.5); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
+            }
         }
 
         /* Main Content */
@@ -666,7 +729,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%);
             z-index: 1;
@@ -921,8 +984,17 @@
             }
 
             @keyframes pulse {
-                0%, 100% { height: 10px; opacity: 0.6; }
-                50% { height: 16px; opacity: 1; }
+
+                0%,
+                100% {
+                    height: 10px;
+                    opacity: 0.6;
+                }
+
+                50% {
+                    height: 16px;
+                    opacity: 1;
+                }
             }
 
             .logo {
@@ -999,6 +1071,7 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1010,6 +1083,7 @@
                 opacity: 0;
                 transform: translateX(-40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1021,6 +1095,7 @@
                 opacity: 0;
                 transform: translateX(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1043,9 +1118,17 @@
             animation: fadeInUp 0.8s ease-out;
         }
 
-        .mode-card:nth-child(2) { animation-delay: 0.1s; }
-        .mode-card:nth-child(3) { animation-delay: 0.2s; }
-        .mode-card:nth-child(4) { animation-delay: 0.3s; }
+        .mode-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .mode-card:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .mode-card:nth-child(4) {
+            animation-delay: 0.3s;
+        }
     </style>
 </head>
 
@@ -1056,7 +1139,7 @@
         <div class="hero-mockup-container">
             <img src="app-mockup-image.png" alt="Mozy App Interface" class="app-mockup">
         </div>
-        
+
         <!-- Clean Branding Header -->
         <div class="hero-branding">
             <div class="logo">
@@ -1087,13 +1170,14 @@
                 Your browser does not support the audio element.
             </audio>
         </div>
-        
+
         <!-- Bottom Content Area -->
         <div class="hero-content-bottom">
             <div class="hero-content-glass">
-                <h1 class="hero-subtitle">Beautiful Classical Music for Kids</h1>
-                <p class="hero-description">Peaceful music for bedtime, focus time, and family moments. Mozy makes classical music simple and enjoyable for children.</p>
-                
+                <h1 class="hero-subtitle">Cozy Classical Music for Kids</h1>
+                <p class="hero-description">Peaceful music for bedtime, focus time, and family moments. Mozy makes
+                    Classical music simple and enjoyable for children.</p>
+
                 <!-- App Store Badges -->
                 <div class="hero-badges-overlay">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
@@ -1106,7 +1190,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             ↓ Scroll to learn more
         </div>
@@ -1125,7 +1209,7 @@
                         <span class="feature-icon">🎼</span>
                         <h3>Human-Crafted Music</h3>
                         <p>Every piece is performed by real musicians, not AI-generated content. Our carefully curated
-                            classical selections are specifically chosen for their soothing, engaging qualities that
+                            Classical selections are specifically chosen for their soothing, engaging qualities that
                             capture young imaginations without being overwhelming.</p>
                     </div>
 
@@ -1133,7 +1217,7 @@
                         <span class="feature-icon">🌊</span>
                         <h3>Calming White Noise</h3>
                         <p>Rain, ocean waves, birdsong, and forest sounds for better sleep and focus. Mix ambient sounds
-                            with classical music for the ultimate peaceful environment.</p>
+                            with Classical music for the ultimate peaceful environment.</p>
                     </div>
 
                     <div class="feature-card">
@@ -1165,7 +1249,7 @@
                         <div class="mode-icon">😴</div>
                         <h3>Bedtime Mode</h3>
                         <p class="mode-subtitle">For a Beautiful Sleep</p>
-                        <p>Curated peaceful classical music perfect for bedtime routines and helping your child drift
+                        <p>Curated peaceful Classical music perfect for bedtime routines and helping your child drift
                             off to dreamland.</p>
                     </div>
 
@@ -1179,9 +1263,9 @@
 
                     <div class="mode-card">
                         <div class="mode-icon">🧠</div>
-                        <h3>Mozart Mode</h3>
+                        <h3>Mozy Mode</h3>
                         <p class="mode-subtitle">For a Healthy Mind</p>
-                        <p>Specifically Mozart compositions leveraging research on Mozart's cognitive benefits for
+                        <p>Pure Classical music, in line with cognitive benefits for
                             developing minds.</p>
                     </div>
 
@@ -1189,7 +1273,7 @@
                         <div class="mode-icon">🔀</div>
                         <h3>Shuffle Mode</h3>
                         <p class="mode-subtitle">Play All Styles</p>
-                        <p>Random selection from all available classical pieces providing variety and musical discovery.
+                        <p>Random selection from all available Classical pieces providing variety and musical discovery.
                         </p>
                     </div>
                 </div>
@@ -1201,7 +1285,7 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Premium Features for Growing Families</h2>
-                    <p class="section-subtitle">Unlock the full potential of classical music for your child</p>
+                    <p class="section-subtitle">Unlock the full potential of Classical music for your child</p>
                 </div>
                 <ul class="premium-list">
                     <li><strong>Save Favorites:</strong> Your child can heart their favorite pieces for easy access</li>
@@ -1221,7 +1305,7 @@
             <div class="container">
                 <h2 class="cta-title">From Our Family to Yours</h2>
                 <p class="cta-subtitle">Mozy is lovingly created by a small family business dedicated to bringing the
-                    magic of classical music to children everywhere. Your support helps us continue crafting beautiful
+                    magic of Classical music to children everywhere. Your support helps us continue crafting beautiful
                     musical experiences that bring families together.</p>
 
                 <!-- App Store Badges -->
@@ -1234,10 +1318,6 @@
                         <div class="coming-soon-text">Coming Soon</div>
                     </div>
                 </div>
-
-
-                <p><strong>Download Mozy today and discover how classical music can transform your child's day, one
-                        beautiful note at a time.</strong></p>
             </div>
         </section>
     </main>
@@ -1250,13 +1330,13 @@
                     <a href="https://www.termsfeed.com/live/b5d7afec-8a35-452a-bd51-797ba3d4ab7c">Privacy Policy</a>
                     <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
                 </div>
-                <p>&copy; 2025 Mozy. Creating cozy moments through classical music.</p>
+                <p>&copy; 2025 Benjamin Rogol</p>
                 <p class="footer-copy">Premium features require subscription. Cancel anytime.</p>
             </div>
-        </footer>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const audio = document.getElementById('backgroundAudio');
             const playPauseBtn = document.getElementById('playPauseBtn');
             const visualizer = document.getElementById('visualizer');
@@ -1265,16 +1345,16 @@
             // Hero glass card mouse tracking effect
             const heroGlass = document.querySelector('.hero-content-glass');
             if (heroGlass) {
-                heroGlass.addEventListener('mousemove', function(e) {
+                heroGlass.addEventListener('mousemove', function (e) {
                     const rect = heroGlass.getBoundingClientRect();
                     const x = ((e.clientX - rect.left) / rect.width) * 100;
                     const y = ((e.clientY - rect.top) / rect.height) * 100;
-                    
+
                     heroGlass.style.setProperty('--mouse-x', x + '%');
                     heroGlass.style.setProperty('--mouse-y', y + '%');
                 });
 
-                heroGlass.addEventListener('mouseleave', function() {
+                heroGlass.addEventListener('mouseleave', function () {
                     heroGlass.style.setProperty('--mouse-x', '50%');
                     heroGlass.style.setProperty('--mouse-y', '50%');
                 });
@@ -1316,7 +1396,7 @@
             playPauseBtn.addEventListener('click', togglePlayPause);
 
             // Audio is ready to play, but keep it paused by default
-            audio.addEventListener('canplaythrough', function() {
+            audio.addEventListener('canplaythrough', function () {
                 // Keep audio paused by default - user must click to play
                 updateIcon(false);
                 visualizer.classList.add('visualizer-paused');
@@ -1324,21 +1404,21 @@
             });
 
             // Handle audio pause
-            audio.addEventListener('pause', function() {
+            audio.addEventListener('pause', function () {
                 updateIcon(false);
                 visualizer.classList.add('visualizer-paused');
                 isPlaying = false;
             });
 
             // Handle audio play
-            audio.addEventListener('play', function() {
+            audio.addEventListener('play', function () {
                 updateIcon(true);
                 visualizer.classList.remove('visualizer-paused');
                 isPlaying = true;
             });
 
             // Handle audio end
-            audio.addEventListener('ended', function() {
+            audio.addEventListener('ended', function () {
                 updateIcon(false);
                 visualizer.classList.add('visualizer-paused');
                 isPlaying = false;
@@ -1346,7 +1426,7 @@
 
             // Set volume to a comfortable level
             audio.volume = 0.6;
-            
+
             // Loop the audio
             audio.loop = true;
 
