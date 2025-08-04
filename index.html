@@ -47,7 +47,7 @@
 
         body {
             font-family: 'Zain', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             line-height: 1.6;
             color: var(--text-dark);
             background: var(--gray-50);
@@ -287,24 +287,6 @@
             animation: subtleFloat 6s ease-in-out infinite;
         }
 
-        .hero-content-glass::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-                    rgba(99, 102, 241, 0.2) 0%,
-                    rgba(139, 92, 246, 0.15) 20%,
-                    rgba(236, 72, 153, 0.1) 40%,
-                    rgba(255, 255, 255, 0.05) 60%,
-                    transparent 80%);
-            opacity: 1;
-            transition: all 0.15s ease-out;
-            pointer-events: none;
-            border-radius: var(--border-radius-large);
-        }
 
         .hero-content-glass::after {
             content: '';
@@ -313,12 +295,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-                    rgba(255, 255, 255, 0.2) 0%,
-                    rgba(255, 255, 255, 0.05) 40%,
+            background: radial-gradient(200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(99, 102, 241, 0.25) 0%,
+                    rgba(139, 92, 246, 0.2) 30%,
+                    rgba(236, 72, 153, 0.15) 50%,
                     transparent 70%);
             opacity: 1;
-            transition: all 0.2s ease;
+            transition: all 0.15s ease;
             border-radius: var(--border-radius-large);
             pointer-events: none;
             mix-blend-mode: overlay;
@@ -384,7 +367,7 @@
         }
 
         .hero-description {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             font-weight: 400;
             opacity: 0.95;
             margin: 0 auto 2rem;
@@ -560,7 +543,7 @@
         }
 
         .section-subtitle {
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             color: var(--text-light);
             max-width: 600px;
             margin: 0 auto;
@@ -855,7 +838,7 @@
         }
 
         .cta-subtitle {
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             color: var(--text-light);
             margin-bottom: 2.5rem;
             max-width: 700px;
@@ -1180,12 +1163,14 @@
 
                 <!-- App Store Badges -->
                 <div class="hero-badges-overlay">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                        alt="Download on the App Store" class="app-badge">
+                    <a href="https://apps.apple.com/app/mozy-classical-music-for-kids/id6747314632" target="_blank" rel="noopener noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                            alt="Download on the App Store" class="app-badge">
+                    </a>
                     <div class="badge-container">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                             alt="Get it on Google Play" class="app-badge coming-soon-badge">
-                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-text">Android Coming Soon</div>
                     </div>
                 </div>
             </div>
@@ -1310,12 +1295,14 @@
 
                 <!-- App Store Badges -->
                 <div class="app-badges">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                        alt="Download on the App Store" class="app-badge">
+                    <a href="https://apps.apple.com/app/mozy-classical-music-for-kids/id6747314632" target="_blank" rel="noopener noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                            alt="Download on the App Store" class="app-badge">
+                    </a>
                     <div class="badge-container">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                             alt="Get it on Google Play" class="app-badge coming-soon-badge">
-                        <div class="coming-soon-text">Coming Soon</div>
+                        <div class="coming-soon-text">Android Coming Soon</div>
                     </div>
                 </div>
             </div>
