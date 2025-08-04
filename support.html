@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - Mozy | Contact Us for Help</title>
-    <meta name="description" content="Need help with Mozy? Contact our support team for assistance with your classical music app experience.">
+    <meta name="description"
+        content="Need help with Mozy? Contact our support team for assistance with your classical music app experience.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Schyler:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="mozy-icon.png">
     <style>
         :root {
@@ -76,7 +79,7 @@
         }
 
         .logo-text {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -99,7 +102,7 @@
         }
 
         .page-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 3rem;
             font-weight: 700;
             text-align: center;
@@ -280,23 +283,24 @@
     <main class="main-content">
         <div class="container">
             <h1 class="page-title">Support</h1>
-            <p class="page-subtitle">Need help with Mozy? We're here to help! Send us a message and we'll get back to you as soon as possible.</p>
+            <p class="page-subtitle">Need help with Mozy? We're here to help! Send us a message and we'll get back to
+                you as soon as possible.</p>
 
             <div class="success-message" id="successMessage">
                 <h3>Thank you for your message!</h3>
-                <p>We've received your support request and will get back to you within 24 hours.</p>
+                <p>We've received your support request and will get back to you as soon as we can!</p>
             </div>
 
             <form class="support-form" id="supportForm" action="https://api.web3forms.com/submit" method="POST">
                 <!-- Web3Forms Access Key -->
                 <input type="hidden" name="access_key" value="f0c61398-50fb-4e1f-aca7-7462629a3d58">
-                
+
                 <!-- Redirect to success page -->
                 <input type="hidden" name="redirect" value="https://mozymusic.com/support.html?success=true">
-                
+
                 <!-- Email destination -->
                 <input type="hidden" name="email" value="ambientclassical@gmail.com">
-                
+
                 <!-- Subject line -->
                 <input type="hidden" name="subject" value="New Support Request from Mozy Website">
 
@@ -312,12 +316,14 @@
 
                 <div class="form-group">
                     <label for="subject" class="form-label">Subject</label>
-                    <input type="text" id="user_subject" name="user_subject" class="form-input" placeholder="What can we help you with?">
+                    <input type="text" id="user_subject" name="user_subject" class="form-input"
+                        placeholder="What can we help you with?">
                 </div>
 
                 <div class="form-group">
                     <label for="message" class="form-label">Message *</label>
-                    <textarea id="message" name="message" class="form-textarea" required placeholder="Please describe your issue or question in detail..."></textarea>
+                    <textarea id="message" name="message" class="form-textarea" required
+                        placeholder="Please describe your issue or question in detail..."></textarea>
                 </div>
 
                 <!-- Honeypot for spam protection -->
@@ -348,7 +354,7 @@
 
     <script>
         // Handle form submission
-        document.getElementById('supportForm').addEventListener('submit', function(e) {
+        document.getElementById('supportForm').addEventListener('submit', function (e) {
             const submitButton = document.getElementById('submitButton');
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;

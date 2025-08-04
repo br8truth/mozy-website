@@ -9,7 +9,7 @@
         content="Give your child the gift of beautiful classical music with Mozy. Human-crafted music, calming white noise, and beautiful themes designed for young listeners ages 0-12.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Schyler:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="mozy-icon.png">
     <style>
         :root {
@@ -181,7 +181,7 @@
         }
 
         .track-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 0.2rem;
@@ -289,7 +289,7 @@
         }
 
         .logo-text {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -308,7 +308,7 @@
         }
 
         .hero-subtitle {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
@@ -433,7 +433,7 @@
         }
 
         .section-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
@@ -510,7 +510,7 @@
         }
 
         .feature-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
@@ -580,7 +580,7 @@
         }
 
         .mode-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -638,10 +638,15 @@
 
         .premium-section .section-title {
             color: var(--white);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+            background: none;
+            -webkit-text-fill-color: white;
         }
 
         .premium-section .section-subtitle {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+            font-weight: 500;
         }
 
         /* Premium Features Grid - Better responsive layout */
@@ -662,17 +667,18 @@
         }
 
         .premium-list li {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             padding: 2rem;
             border-radius: var(--border-radius-large);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
             height: 100%;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
         .premium-list li::after {
@@ -689,9 +695,9 @@
 
         .premium-list li:hover {
             transform: translateY(-8px) scale(1.02);
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .premium-list li:hover::after {
@@ -708,6 +714,12 @@
             display: block;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            font-weight: 700;
+        }
+
+        .premium-list li {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         /* CTA Section */
@@ -717,7 +729,7 @@
         }
 
         .cta-title {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Schyler', 'Space Grotesk', sans-serif;
             font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
