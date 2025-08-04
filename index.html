@@ -263,6 +263,7 @@
             overflow: hidden;
             cursor: pointer;
             animation: subtleFloat 6s ease-in-out infinite;
+            transform-style: preserve-3d;
         }
 
         .hero-content-glass::before {
@@ -272,13 +273,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-                rgba(99, 102, 241, 0.15) 0%,
-                rgba(139, 92, 246, 0.1) 25%,
-                rgba(236, 72, 153, 0.08) 50%,
-                transparent 70%);
+            background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.2) 0%,
+                rgba(139, 92, 246, 0.15) 20%,
+                rgba(236, 72, 153, 0.1) 40%,
+                rgba(255, 255, 255, 0.05) 60%,
+                transparent 80%);
             opacity: 1;
-            transition: opacity 0.2s ease;
+            transition: all 0.15s ease-out;
             pointer-events: none;
             border-radius: var(--border-radius-large);
         }
@@ -1260,7 +1262,7 @@
             const visualizer = document.getElementById('visualizer');
             let isPlaying = false;
 
-            // Hero glass card mouse tracking effect
+            // Hero glass card mouse tracking effect with subtle warping
             const heroGlass = document.querySelector('.hero-content-glass');
             if (heroGlass) {
                 heroGlass.addEventListener('mousemove', function(e) {
@@ -1268,13 +1270,21 @@
                     const x = ((e.clientX - rect.left) / rect.width) * 100;
                     const y = ((e.clientY - rect.top) / rect.height) * 100;
                     
+                    // Calculate warp values based on mouse position
+                    const warpX = (x - 50) * 0.05; // Subtle warp amount
+                    const warpY = (y - 50) * 0.05;
+                    
                     heroGlass.style.setProperty('--mouse-x', x + '%');
                     heroGlass.style.setProperty('--mouse-y', y + '%');
+                    
+                    // Apply subtle transform for warping effect
+                    heroGlass.style.transform = `perspective(1000px) rotateX(${-warpY}deg) rotateY(${warpX}deg)`;
                 });
 
                 heroGlass.addEventListener('mouseleave', function() {
                     heroGlass.style.setProperty('--mouse-x', '50%');
                     heroGlass.style.setProperty('--mouse-y', '50%');
+                    heroGlass.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
                 });
             }
 
