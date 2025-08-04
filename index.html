@@ -263,7 +263,6 @@
             overflow: hidden;
             cursor: pointer;
             animation: subtleFloat 6s ease-in-out infinite;
-            transform-style: preserve-3d;
         }
 
         .hero-content-glass::before {
@@ -1262,7 +1261,7 @@
             const visualizer = document.getElementById('visualizer');
             let isPlaying = false;
 
-            // Hero glass card mouse tracking effect with subtle warping
+            // Hero glass card mouse tracking effect
             const heroGlass = document.querySelector('.hero-content-glass');
             if (heroGlass) {
                 heroGlass.addEventListener('mousemove', function(e) {
@@ -1270,21 +1269,13 @@
                     const x = ((e.clientX - rect.left) / rect.width) * 100;
                     const y = ((e.clientY - rect.top) / rect.height) * 100;
                     
-                    // Calculate warp values based on mouse position
-                    const warpX = (x - 50) * 0.05; // Subtle warp amount
-                    const warpY = (y - 50) * 0.05;
-                    
                     heroGlass.style.setProperty('--mouse-x', x + '%');
                     heroGlass.style.setProperty('--mouse-y', y + '%');
-                    
-                    // Apply subtle transform for warping effect
-                    heroGlass.style.transform = `perspective(1000px) rotateX(${-warpY}deg) rotateY(${warpX}deg)`;
                 });
 
                 heroGlass.addEventListener('mouseleave', function() {
                     heroGlass.style.setProperty('--mouse-x', '50%');
                     heroGlass.style.setProperty('--mouse-y', '50%');
-                    heroGlass.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
                 });
             }
 
