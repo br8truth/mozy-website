@@ -1255,19 +1255,12 @@
             // Add click event listener
             playPauseBtn.addEventListener('click', togglePlayPause);
 
-            // Try to auto-play (will only work after user interaction due to browser policies)
+            // Audio is ready to play, but keep it paused by default
             audio.addEventListener('canplaythrough', function() {
-                // Attempt autoplay, but don't worry if it fails
-                audio.play().then(() => {
-                    updateIcon(true);
-                    visualizer.classList.remove('visualizer-paused');
-                    isPlaying = true;
-                }).catch(() => {
-                    // Auto-play prevented, which is expected
-                    updateIcon(false);
-                    visualizer.classList.add('visualizer-paused');
-                    console.log('Auto-play prevented by browser policy');
-                });
+                // Keep audio paused by default - user must click to play
+                updateIcon(false);
+                visualizer.classList.add('visualizer-paused');
+                isPlaying = false;
             });
 
             // Handle audio pause
